@@ -1,0 +1,23 @@
+{
+  "name": "concept-homepage-v1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "compile:css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matichek/concept-homepage-v1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matichek/concept-homepage-v1/issues"
+  },
+  "homepage": "https://github.com/matichek/concept-homepage-v1#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.23"
+  }
+}
