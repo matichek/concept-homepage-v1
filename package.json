@@ -5,7 +5,7 @@
   "main": "tailwind.config.js",
   "scripts": {
     "watch:css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "build:css": "tailwind build src/input.css -o dist/style.css"
+    "build:css": "tailwind build src/input.css -o dist/output.css"
   },
   "repository": {
     "type": "git",
