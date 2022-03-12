@@ -4,7 +4,7 @@
   "description": "",
   "main": "tailwind.config.js",
   "scripts": {
-    "compile:css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+    "watch:css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
   },
   "repository": {
     "type": "git",
