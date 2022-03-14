@@ -5,7 +5,9 @@
   "main": "tailwind.config.js",
   "scripts": {
     "watch:css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "build:css": "tailwind build src/input.css -o dist/output.css"
+    "build:css": "tailwind build src/input.css -o dist/output.css",
+    "watch:js": "npx babel src/js/app.js --watch --out-file dist/js/app.js ",
+    "build:js": "babel src/js/app.js | uglifyjs -m -c > dist/js/app.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,10 @@
   },
   "homepage": "https://github.com/matichek/concept-homepage-v1#readme",
   "devDependencies": {
-    "tailwindcss": "^3.0.23"
+    "tailwindcss": "^3.0.23",
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "uglify-js": "^3.15.2"
   }
 }
