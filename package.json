@@ -6,7 +6,7 @@
   "scripts": {
     "watch:css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "build:css": "tailwind build src/input.css -o dist/output.css",
-    "watch:js": "npx babel src/js/app.js --watch --out-file dist/js/app.js ",
+    "watch:js": "npx babel src/js/app.js --watch --out-file dist/js/app.js",
     "build:js": "babel src/js/app.js | uglifyjs -m -c > dist/js/app.js"
   },
   "repository": {

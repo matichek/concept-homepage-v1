@@ -22,13 +22,23 @@ class UI {
 
   showPorts(ports) {
     let output = '';
+    let gitButton = '';
 
     ports.forEach((port) => {
 
+      if(port.git_url === '') {
+          gitButton = `<a href="#" style="cursor: not-allowed;" target="_blank" title="This Github is private"
+              class="z-2 relative bg-gray-400 text-white opacity-60 rounded-3xl inline-block mt-6 font-bold uppercase px-4 py-2">Private Github</a>`
+      } else {
+        gitButton = `
+          <a href="${port.git_url}" target="_blank" title="Will open in new tab"
+              class="z-2 relative bg-gray-800 text-white rounded-3xl inline-block mt-6 font-bold hover:bg-indigo-700 uppercase px-4 py-2">Public Github link</a>
+        `
+      }
+
       output += `
-      
         <div class="">
-          <div class="bg-white mb-4 p-6 rounded-xl shadow-2xl hover:shadow-sm shadow-indigo-900/20 card relative overflow-hidden">
+          <div class="bg-white mb-4 p-6 rounded-xl shadow-2xl transition-all hover:top-1 hover:shadow-sm shadow-indigo-900/20 card relative overflow-hidden">
             <img class="w-full object-cover absolute z-0 top-0 right-0"
               src="${port.img_url}"
               alt="">
@@ -36,14 +46,12 @@ class UI {
             <h4 class="text-indigo-50 font-extrabold mb-4 uppercase z-2 relative">${port.title}</h4>
             <p class="text-sm z-2 relative text-indigo-50">${port.desc}</strong>
             </p>
-            <a href="${port.url}" target="_blank"
-              class="z-2 relative bg-indigo-900 text-white rounded-3xl inline-block mt-6 font-bold hover:bg-indigo-700 uppercase px-4 py-2">Link
-              to the app</a>
+            <a href="${port.url}" target="_blank" title="Will open in new tab"
+              class="z-2 relative bg-indigo-900 text-white rounded-3xl inline-block mt-6 font-bold hover:bg-indigo-700 uppercase px-4 py-2">Link to demo</a>
+            ${gitButton}
           </div>
         </div>
-      
       `
-
     })
 
     this.cardHolder.innerHTML = output;
