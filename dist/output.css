@@ -698,6 +698,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
 .items-center {
   align-items: center;
 }
@@ -1198,6 +1202,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     display: block;
   }
 
+  .md\:grid {
+    display: grid;
+  }
+
   .md\:hidden {
     display: none;
   }
@@ -1208,6 +1216,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:w-auto {
     width: auto;
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .md\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
@@ -1277,6 +1289,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     display: block;
   }
 
+  .lg\:grid {
+    display: grid;
+  }
+
   .lg\:h-full {
     height: 100%;
   }
@@ -1295,6 +1311,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:flex-grow-0 {
     flex-grow: 0;
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .lg\:justify-start {
